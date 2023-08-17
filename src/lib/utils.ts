@@ -8,7 +8,7 @@ import { twMerge } from 'tailwind-merge';
  * <p className={cn({ 'text-neutral-700 line-through': task.isDone })}>
  *   {task.task}
  * </p>
- * 
+ *
  * <div
  * ref={ref}
  * className={cn(
