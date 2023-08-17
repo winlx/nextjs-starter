@@ -1,6 +1,7 @@
 const commonRules = {
   'import/prefer-default-export': 'off',
   'import/no-default-export': 'error',
+  'react/react-in-jsx-scope': 'off',
   'import/imports-first': ['error', 'absolute-first'],
   'no-param-reassign': [
     'error',
@@ -24,14 +25,28 @@ const commonRules = {
     { blankLine: 'always', prev: '*', next: ['return', 'block-like'] },
     { blankLine: 'always', prev: ['block-like'], next: '*' },
   ],
+  'import/order': 'off',
 };
 
 module.exports = {
   extends: [
-    'next/core-web-vitals',
+    'airbnb',
+    'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@next/next/core-web-vitals',
     'plugin:prettier/recommended',
   ],
+  parserOptions: {
+    project: './tsconfig.json',
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+  },
   rules: { ...commonRules },
   overrides: [
     {
