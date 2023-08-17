@@ -1,0 +1,38 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: debug server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "skipFiles": ["**/node_modules/**", "<node_internals>/**"]
+    },
+    {
+      "name": "Next.js: debug client-side",
+      "type": "chrome",
+      "request": "launch",
+      "userDataDir": "/home/aleksei/Chrome_remote_debugging/",
+      "runtimeArgs": [
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--auto-open-devtools-for-tabs"
+      ],
+      "url": "http://localhost:3000",
+      "skipFiles": ["**/node_modules/**", "<node_internals>/**"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Next.js: debug full stack",
+      "configurations": [
+        "Next.js: debug server-side",
+        "Next.js: debug client-side"
+      ],
+      "stopAll": true
+    }
+  ]
+}
