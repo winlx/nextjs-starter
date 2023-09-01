@@ -1,8 +1,11 @@
 const commonRules = {
   'import/prefer-default-export': 'off',
   'import/no-default-export': 'error',
+  'react/jsx-props-no-spreading': 'off',
   'react/react-in-jsx-scope': 'off',
   'import/imports-first': ['error', 'absolute-first'],
+  'react/prop-types': 'off',
+  'react/require-default-props': 'off',
   'no-param-reassign': [
     'error',
     { props: true, ignorePropertyModificationsFor: ['draft'] },
