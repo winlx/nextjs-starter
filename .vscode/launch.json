@@ -17,6 +17,7 @@
       "request": "launch",
       "userDataDir": "/home/aleksei/Chrome_remote_debugging/",
       "runtimeArgs": [
+        // "--disable-web-security", // опционально, если нужно отключить cors
         "--no-first-run",
         "--no-default-browser-check",
         "--auto-open-devtools-for-tabs"
