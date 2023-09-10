@@ -22,7 +22,10 @@ const commonRules = {
       allowExpressions: true,
     },
   ],
-  '@typescript-eslint/explicit-function-return-type': 'error',
+  '@typescript-eslint/explicit-function-return-type': [
+    'error',
+    { allowExpressions: true, allowTypedFunctionExpressions: true },
+  ],
   'padding-line-between-statements': [
     'error',
     { blankLine: 'always', prev: '*', next: ['return', 'block-like'] },
