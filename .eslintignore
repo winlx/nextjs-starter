@@ -1,1 +1,4 @@
 .eslintrc.cjs
+tailwind.config.ts
+next.config.js
+postcss.config.js
